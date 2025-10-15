@@ -43,6 +43,8 @@ let singa = hewan('mamalia', 4);
 
 // 3. Constuctor function, dengan keyword new
 // tidak perlu deklrasikan variabel dan return-nya
+// dibelakang layar, this => membuat variable dan return this
+// let this = {} | return this
 
 function karakter(akhlak, etika) {
     this.akhlak = akhlak;
@@ -88,7 +90,7 @@ const methodKerja = {
 function kerja (nama, energi){
     let kerja = Object.create(methodKerja);
     kerja.nama = nama;
-    kerja.energi = energi;
+    kerja.energi = energi; 
 
     return kerja;
 }
