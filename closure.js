@@ -41,5 +41,5 @@ counter = 1000; //tidak akan dijadikan variable scope function expression, karen
 
 console.log(add());
 console.log(add());
-console.log(add);
+console.log(add());
 
