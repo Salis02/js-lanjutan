@@ -12,6 +12,8 @@ for (let i = 0; i <= 10; i++) {
 
 //CONST => nilai konstant, tidak bisa diganti, meminimalisir perubahan state
 
-const identitas = 'Lanang'
-identitas = 'Kocak'
-console.log(i);
+const identitas = {
+    nama: 'Salis Nizar Qomaruzaman',
+    umur: '24 tahun'
+}
+console.log(identitas);

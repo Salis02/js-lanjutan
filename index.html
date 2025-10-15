@@ -1,14 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="arrowFunction.css">
 </head>
+
 <body>
     <h1>Belajar JS lanjutan</h1>
+    <div class="box"></div>
 </body>
 <!-- <script src="object.js"></script> -->
 <!-- <script src="closure.js"></script> -->
-<script src="variable.js"></script>
+<!-- <script src="variable.js"></script> -->
+<!-- <script src="arrowFunction.js"></script> -->
+
+<script>
+    const box = document.querySelector('.box');
+    box.addEventListener('click', function () {
+
+        let satu = 'size';
+        let dua = 'caption';
+
+        if (this.classList.contains(satu)) {
+            [satu, dua] = [dua, satu];
+        }
+
+        this.classList.toggle(satu);
+        //This bisa digunakan ketika ada function deklaration dahulu yang isinya menggunakan arrow function
+        setTimeout(
+            () => {
+                this.classList.toggle(dua);
+            }, 600
+        );
+    });
+
+</script>
+
 </html>
