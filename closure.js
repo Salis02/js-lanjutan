@@ -1,4 +1,5 @@
-
+//HOISTING => mengangkat ke atas
+// => membuat variable = undefined
 function printGreetings(nama) {
     this.nama = nama;
     function greetings() {
