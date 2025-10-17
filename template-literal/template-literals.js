@@ -86,7 +86,7 @@ const lihatHewan = `
 
 const investasi = {
     nama: 'Investasi',
-    deskripsi: 'Sebuah penyaluran asset/harta ke sebuah platform yang berkredible dengan tujuan memperoleh keuntungan',
+    deskripsi: 'sebuah penyaluran asset/harta ke sebuah platform yang berkredible dengan tujuan memperoleh keuntungan',
     contoh: [
         'uang',
         'emas',
@@ -95,13 +95,11 @@ const investasi = {
     ]
 }
 
-const investasiContoh = (x) =>{
+const investasiContoh = (x) => {
     return `
-    <ol>
-        <li>
-            ${x.map(z =>`<p>${z}</p>`).join('')}
-        </li>
-    </ol>
+    <ul>
+        ${x.map(z => `<li>${z}</li>`).join('')}
+    </ul>
     `
 }
 
@@ -112,3 +110,5 @@ const testing = `
         ${investasiContoh(investasi.contoh)}
     </p>
 `
+
+document.body.innerHTML = testing;
