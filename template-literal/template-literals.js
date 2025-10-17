@@ -83,3 +83,32 @@ const lihatHewan = `
 // document.body.innerHTML = lihatHewan;
 
 // 4. Nested => HTML Fragments
+
+const investasi = {
+    nama: 'Investasi',
+    deskripsi: 'Sebuah penyaluran asset/harta ke sebuah platform yang berkredible dengan tujuan memperoleh keuntungan',
+    contoh: [
+        'uang',
+        'emas',
+        'perak',
+        'dan sejenisnya'
+    ]
+}
+
+const investasiContoh = (x) =>{
+    return `
+    <ol>
+        <li>
+            ${x.map(z =>`<p>${z}</p>`).join('')}
+        </li>
+    </ol>
+    `
+}
+
+const testing = `
+    <p>
+        ${investasi.nama} adalah ${investasi.deskripsi}.<br>
+        Adapun contoh dari ${investasi.nama} adalah sbb : <br>
+        ${investasiContoh(investasi.contoh)}
+    </p>
+`
