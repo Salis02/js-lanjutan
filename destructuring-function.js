@@ -63,14 +63,19 @@ const { prodi, kondisi = 'active' } = mahasiswa;
 const data = {
     id: 147,
     nama: 'Salis Nizar Qomaruzaman',
-    pekerjaan: 'Programmer'
+    pekerjaan: 'Programmer',
+    aset: {
+        fisik: 'Motor',
+        nonFisik: 'Saldo'
+    }
 }
 
-function getName({ nama, pekerjaan }) {
-    console.log(`Data ${nama} ditemukan! Subjek adalah seorang ${pekerjaan}`);
+//Pecah objek di paramter functionnya dengan ({param})
+function getName({ nama, pekerjaan, aset: { fisik, nonFisik } }) {
+    console.log(`Data ${nama} ditemukan! Subjek adalah seorang ${pekerjaan}. Asetnya ${fisik} dan ${nonFisik}`);
 }
 
-// getName(data);
+getName(data);
 
 
 // Contoh implementasi pada function
@@ -88,4 +93,4 @@ const hitung = (x, y) => {
 
 const { tambah, persentase, bagi, kurang, kali } = hitung(14, 21);
 
-console.log(anjay);
+// console.log(tambah, persentase, kali, kurang, bagi);
