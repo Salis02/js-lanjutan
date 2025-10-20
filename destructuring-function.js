@@ -59,6 +59,7 @@ const mahasiswa = {
 const { prodi, kondisi = 'active' } = mahasiswa;
 // console.log(kondisi);
 
+// Destructuring functions arguments
 const data = {
     id: 147,
     nama: 'Salis Nizar Qomaruzaman',
@@ -66,8 +67,25 @@ const data = {
 }
 
 function getName({ nama, pekerjaan }) {
-    alert(`Data ${nama} ditemukan! Subjek adalah seorang ${pekerjaan}`);
+    console.log(`Data ${nama} ditemukan! Subjek adalah seorang ${pekerjaan}`);
 }
 
-getName(data);
+// getName(data);
 
+
+// Contoh implementasi pada function
+
+// returnnya objek
+const hitung = (x, y) => {
+    return {
+        tambah: x + y,
+        kurang: x - y,
+        kali: x * y,
+        bagi: x / y,
+        persentase: x + y / x + y * 100
+    }
+}
+
+const { tambah, persentase, bagi, kurang, kali } = hitung(14, 21);
+
+console.log(anjay);
