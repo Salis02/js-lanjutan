@@ -70,7 +70,7 @@ const data = {
     }
 }
 
-//Pecah objek di paramter functionnya dengan ({param})
+//Pecah objek di paramter functionnya dengan ({....})
 function getName({ nama, pekerjaan, aset: { fisik, nonFisik } }) {
     console.log(`Data ${nama} ditemukan! Subjek adalah seorang ${pekerjaan}. Asetnya ${fisik} dan ${nonFisik}`);
 }
